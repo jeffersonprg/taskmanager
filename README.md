@@ -1,5 +1,5 @@
 
-![screenshot app](https://imgur.com/a/2cgvca6)
+![screenshot app](https://i.imgur.com/Ig4zlk3.png)
 
 📝 App de Gestão de Tarefas
 

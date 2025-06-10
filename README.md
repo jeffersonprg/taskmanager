@@ -1,3 +1,6 @@
+
+![screenshot app](https://imgur.com/a/2cgvca6)
+
 📝 App de Gestão de Tarefas
 
 Aplicação web simples desenvolvida com Flask e SQLite, que permite ao usuário criar, marcar como concluídas e excluir tarefas.

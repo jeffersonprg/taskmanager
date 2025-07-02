@@ -1,14 +1,17 @@
+import os
 from flask import Flask, render_template, request,  redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.secret_key = "1234"  # Chave secreta para proteger sessões e cookies
+app.secret_key = "1234"
 
-# Corrigido: banco de dados na mesma pasta do app
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///C:/Users/Gebruiker/PycharmProjects/GestordeTarefas1/database/tarefas.db"
+basedir = os.path.abspath(os.path.dirname(__file__))
+db_path = os.path.join(basedir, 'database', 'tarefas.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{db_path}"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
+
 
 class Tarefa(db.Model):
     __tablename__ = "tarefas"
